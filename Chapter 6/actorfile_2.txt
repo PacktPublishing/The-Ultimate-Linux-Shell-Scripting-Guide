@@ -1,0 +1,5 @@
+Benny		comedy
+Allen		comedy
+Ladd		adventure
+Hitchcock	mystery
+Robinson	drama
