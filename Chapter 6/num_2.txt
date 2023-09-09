@@ -1,0 +1,5 @@
+uno	one
+tres	three
+cuatro	four
+siete	seven
+cinco	five
