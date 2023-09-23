@@ -1,0 +1,5 @@
+Wayne		drama
+Allen		comedy
+Allen		comedy
+Price		horror
+Davis		drama
