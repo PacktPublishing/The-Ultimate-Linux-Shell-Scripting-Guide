@@ -1,0 +1,10 @@
+\:\:\:
+This is the file header.
+
+\:\:
+This is the body of the file.
+There's not a lot to say, so I'll
+close it.
+
+\:
+This is the footer.
