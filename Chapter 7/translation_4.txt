@@ -1,0 +1,4 @@
+Let's now convert everything from
+a through l to A through L, and
+everything from u through z to
+U through Z.

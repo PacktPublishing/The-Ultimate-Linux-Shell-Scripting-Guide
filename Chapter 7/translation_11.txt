@@ -1,0 +1,4 @@
+Now,
+I just want to
+delete the 
+newline characters.

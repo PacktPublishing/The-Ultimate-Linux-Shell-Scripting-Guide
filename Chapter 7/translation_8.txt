@@ -1,0 +1,3 @@
+I'll now show you how to delete
+everything except for vowels from
+a text stream.

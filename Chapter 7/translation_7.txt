@@ -1,0 +1,3 @@
+I will now show you how to delete
+all vowels from a text stream. Are
+you really ready for this?
