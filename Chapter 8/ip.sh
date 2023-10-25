@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 echo "IP Addresses of intruder attempts"
 declare -a ip
 ip=( 192.168.3.78 192.168.3.4 192.168.3.9 )
