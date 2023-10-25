@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 network() {
 if [[ $# -eq 0 ]]; then
