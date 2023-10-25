@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 os=$(uname) 
 quantity=$(cut -f3 -d: /etc/passwd | grep -w 0 | wc -l) 
 if [ $os == Linux ]; then
