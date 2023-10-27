@@ -1,0 +1,29 @@
+howdy_world() {
+echo "Howdy, world!"
+echo "How's it going?"
+}
+
+howdy_georgia() {
+echo "Howdy, Georgia!"
+echo "How's it going?"
+}
+
+network() {
+site="$1"
+case "$site" in
+"")
+        site="google.com"
+;;
+*)
+        site="$1"
+;;
+esac
+ping -c 2 $site > /dev/null
+if [[ $? != 0 ]]; then
+        echo $(date +%F) . . . Network Failure for site "$site"!
+        logger "Could not reach $site."
+else
+        echo $(date +%F) . . . Success! $site is reachable.
+        logger "$site is reachable."
+fi
+}
