@@ -8,10 +8,10 @@ else
 fi
 ping -c 2 $site > /dev/null
 if [[ $? != 0 ]]; then
-        echo $(date +%F) . . . Network Failure!
+        echo $(date +%F) . . . Network Failure for "$site"!
         logger "Could not reach $site."
 else
-        echo $(date +%F) . . . Success!
+        echo $(date +%F) . . . Success for "$site"!
         logger "$site is reachable."
 fi
 }
