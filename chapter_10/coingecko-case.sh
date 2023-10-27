@@ -19,7 +19,7 @@ list)
   -H 'accept: application/json' | jq | tee coinlist.txt
 	  ;;
 
-currency)
+currencies)
        curl -X 'GET' \
   'https://api.coingecko.com/api/v3/simple/supported_vs_currencies' \
   -H 'accept: application/json' | jq | tee currency_list.txt
