@@ -1,0 +1,24 @@
+       h2d() {
+           local h2dnum=$(echo "ibase=16; $input_num" | bc)
+           echo $h2dnum
+           }
+
+       d2h() {
+           local d2hnum=$(echo "obase=16; $input_num" | bc)
+           echo $d2hnum
+           }
+
+       o2h() {
+           local o2hnum=$(echo "obase=16; ibase=8; $input_num" | bc)
+           echo $o2hnum
+           }
+
+       h2o() {
+           local h2onum=$(echo "obase=8; ibase=16; $input_num" | bc)
+           echo $h2onum
+           }
+
+       d2b() {
+           local d2bnum=$(echo "obase=2; $input_num" | bc)
+           echo $d2bnum
+           }

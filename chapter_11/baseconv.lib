@@ -1,0 +1,15 @@
+       h2d() {
+           h2dnum=$(echo "ibase=16; $input_num" | bc)
+           }
+
+       d2h() {
+           d2hnum=$(echo "obase=16; $input_num" | bc)
+           }
+
+       o2h() {
+           o2hnum=$(echo "obase=16; ibase=8; $input_num" | bc)
+           }
+
+       h2o() {
+           h2onum=$(echo "obase=8; ibase=16; $input_num" | bc)
+           }
