@@ -1,10 +1,6 @@
 #!/bin/bash
-
 file=$1
-
-sed -i '1d'  $file
-
-echo "The market share for Windows is $(grep 'Win' $file | cut -d, -f2 | grep . | paste -s -d+ | bc)%." > report_for_$(date +%F).txt
+echo "The market share for Windows is $(grep 'Win' $file | cut -d, -f2 | paste -s -d+ | bc)%." > report_for_$(date +%F).txt
 
 echo "The market share for macOS is $(grep 'OS X' $file | cut -d, -f2)%." >> report_for_$(date +%F).txt
 
