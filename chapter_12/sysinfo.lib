@@ -82,7 +82,7 @@
              elif [ $(uname) = Darwin ]; then
                    echo "<h2>System release info</h2>"
                    echo "<pre>"
-                   echo "macOS"
+                   sw_vers
                    echo "<br>"
                    uname -sprm
                    echo "</pre>"
