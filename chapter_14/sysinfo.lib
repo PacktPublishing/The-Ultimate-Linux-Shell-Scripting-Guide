@@ -1,0 +1,68 @@
+show_uptime() { 
+    echo "<h2>System uptime</h2>" 
+    echo "<pre>" 
+    uptime 
+    echo "</pre>" 
+} 
+
+drive_space() { 
+    echo "<h2>Filesystem space</h2>" 
+    echo "<pre>" 
+    df 
+    echo "</pre>" 
+} 
+
+home_space() { 
+    echo "<h2>Home directory space by user</h2>" 
+    echo "<pre>" 
+    echo "Bytes Directory"
+    du -s /home/* | sort -nr 
+    echo "</pre>" 
+} 
+
+open_files() { 
+    echo "<h2>Number of open files for user "apache"</h2>" 
+    echo "<pre>" 
+    lsof -u apache | wc -l 
+    echo "</pre>" 
+} 
+
+open_files_root() { 
+    echo "<h2>Number of open files for root</h2>" 
+    echo "<pre>" 
+    echo "There are $(lsof -u root | wc -l) open files for root."
+    echo "</pre>" 
+}
+
+open_files_users() {
+           echo "<h2> Number of open files for normal users</h2>"
+           for directory in /home/*
+           do
+           user=$(basename $directory)
+           if [ $user != "lost+found" ]; then
+                   echo "There are $(lsof -u $(id -u $user) | wc -l) open files for $user. "
+                   echo "<br>"
+           fi
+           done
+}
+
+
+
+system_info() { 
+# Find any release files in /etc
+        os=$(grep "PRETTY_NAME" /etc/os-release)
+        echo "<h2>System release info</h2>" 
+        echo "<pre>" 
+        echo "${os:12}"
+        uname -orp 
+        echo "</pre>" 
+} 
+
+VSZ_info() {
+           echo "<h2>Processes with more than 500000 bytes VSZ
+           size.</h2>"
+           echo "<pre>"
+
+           ps aux | awk 'NR > 1 && $5 > 500000 {print "USER:" "\t\t" $1 "\n" "PID:" "\t\t" $2 "\n" "VSZ:" "\t\t" $5 "\n" "COMMAND:" "\t" $11 "\n\n"}'
+           echo "</pre>"
+}
