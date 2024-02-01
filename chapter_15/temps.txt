@@ -1,0 +1,13 @@
+Temperature Celsius_or_Fahrenheit
+32 F
+212 F
+-40 F
+-14.7 F
+24.6111 C
+75.8 F
+55.21 F
+23.9444 C
+29.8 F
+104.34 F
+98.6 F
+23.1 C
