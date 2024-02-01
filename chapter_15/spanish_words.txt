@@ -1,0 +1,6 @@
+ENGLISH:SPANISH:GENDER
+cat:gato:M
+table:mesa:F
+bed:cama:F
+bus:camion:M
+house:casa:F
