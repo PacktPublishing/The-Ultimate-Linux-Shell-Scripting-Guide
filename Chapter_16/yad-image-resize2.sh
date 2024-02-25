@@ -9,6 +9,6 @@ dialog=$(yad --title "Image Resize" --form --field="Resize parameter" --field="Q
 size=$(echo $dialog | awk 'BEGIN {FS="|"} {print $1}')
 quality=$(echo $dialog | awk 'BEGIN {FS="|"} {print $2}')
 
-convert "$imageFile" -resize "$size" -quality $quality "$quality" "$imageFile" -delete 1 "$newfilename"_resized"$suffix"
+convert -resize "$size" -quality "$quality" "$imageFile" -delete 1 "$newfilename"_resized"$suffix"
 
 yad --title="Status" --width=300  --button="OK:0"  --text="All done. Yay!"
