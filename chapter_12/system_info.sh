@@ -26,6 +26,9 @@ cat <<- _system-info_ > sysinfo.html
     </body> 
     </html> 
 _system-info_
-pandoc -o sysinfo.pdf sysinfo.html
-rm sysinfo.html
+
+if [[ -f /usr/local/bin/pandoc ]] || [[ -f /usr/bin/pandoc ]]; then
+        pandoc -o sysinfo.pdf sysinfo.html
+        rm sysinfo.html
+fi
 exit
