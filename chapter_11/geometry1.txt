@@ -1,0 +1,9 @@
+print "\nGeometry!\n"
+print "Let's say that you want to calculate the area of a circle.\n"
+print "Enter the radius of the circle: "; radius = read()
+pi=3.14159265358979323846
+area=pi*(radius^2)
+print "The area of this circle is: \n"
+print area
+print "\n"
+quit
