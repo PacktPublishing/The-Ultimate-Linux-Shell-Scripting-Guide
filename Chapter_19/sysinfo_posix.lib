@@ -1,0 +1,101 @@
+        show_uptime() { 
+                echo "<h2>System uptime</h2>" 
+                echo "<pre>" 
+                uptime 
+                echo "</pre>" 
+        } 
+
+        drive_space() { 
+            echo "<h2>Filesystem space</h2>" 
+            echo "<pre>" 
+            df -P
+            echo "</pre>" 
+        } 
+
+        home_space() { 
+            echo "<h2>Home directory space by user</h2>" 
+            echo "<pre>" 
+            echo "Bytes Directory"
+            if [ "$(uname)" = SunOS ]; then
+                    du -sh /export/home/* | sort -nr
+            elif [ "$(uname)" = Darwin ]; then
+                    du -sh /Users/* | sort -nr
+            else
+                    du -sh /home/* | sort -nr 
+            fi
+            echo "</pre>" 
+        } 
+
+        open_files() { 
+            echo "<h2>Number of open files for user "apache"</h2>" 
+            echo "<pre>" 
+            lsof -u apache | wc -l 
+            echo "</pre>" 
+        } 
+
+        open_files_root() { 
+            echo "<h2>Number of open files for root</h2>" 
+            echo "<pre>" 
+            lsof -u root | wc -l 
+            echo "</pre>" 
+        }
+
+        open_files_users() {
+            echo "<h2> Number of open files for normal users</h2>"
+            if [ "$(uname)" = SunOS ]; then
+                    cd /export/home || return
+            elif [ "$(uname)" = Darwin ]; then
+                    cd /Users || return
+            else
+                    cd /home || echo return
+            fi
+
+           for user in *
+           do
+           if [ "$user" != "lost+found" ] && [ "$user" != "Shared" ]; then
+                   echo "There are $(lsof -u "$(id -u "$user")" | wc -l) open files for ""$user"". "
+                   echo "<br>"
+           fi
+           done
+           cd
+        }
+
+
+
+        system_info() { 
+           # Find any release files in /etc
+           if [ -f /etc/os-release ]; then
+                   os=$(grep "PRETTY_NAME" /etc/os-release)
+                   echo "<h2>System release info</h2"
+                   echo "<pre>"
+                   echo "${os#PRETTY_NAME=}"
+                   echo "<br>"
+                   uname -orp
+                   echo "</pre>"
+            elif [ "$(uname)" = SunOS ]; then
+                   echo "<h2>System release info</h2>"
+                   echo "<pre>"
+                   head -1 /etc/release
+                   echo "<br>"
+                   uname -orp
+                   echo "</pre>"
+             elif [ "$(uname)" = Darwin ]; then
+                   echo "<h2>System release info</h2>"
+                   echo "<pre>"
+                   sw_vers
+                   echo "<br>"
+                   uname -sprm
+                   echo "</pre>"
+              else
+                   echo "Unknown operating system"
+              fi     
+        } 
+
+        VSZ_info() {
+           echo "<h2>Processes with more than 500000 bytes VSZ
+           size.</h2>"
+           echo "<pre>"
+
+           ps aux | awk 'NR > 1 && $5 > 500000 {print "USER:" "\t\t" $1 "\n" "PID:" "\t\t" $2 "\n" "VSZ:" "\t\t" $5 "\n" "COMMAND:" "\t" $11 "\n\n"}'
+           echo "</pre>"
+}
