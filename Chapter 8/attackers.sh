@@ -6,7 +6,7 @@ echo "Here is the complete list: "
 echo ${attackers[@]} 
 echo 
 echo "Let us now count the items in the list."
-elements=${#attackers[*]} 
+num_attackers=${#attackers[*]} 
 echo "There are $elements IP addresses in the list." 
 echo 
 echo "attackers[2] is ${attackers[2]}, which is the third address in the list." 
