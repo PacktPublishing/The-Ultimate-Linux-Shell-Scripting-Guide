@@ -1,5 +1,5 @@
 #!/bin/bash
-[ -f myfile.txt ] && echo "This file exists." || echo "This file does not exist".
+[ -f myfile.txt ] && echo "This file exists." || echo "This file does not exist."
 
 echo 
 echo "We will now create myfile.txt if it does not exist, and make it with only read permissions for $USER." 
