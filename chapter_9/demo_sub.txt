@@ -1,0 +1,1 @@
+s/line/sentence/p

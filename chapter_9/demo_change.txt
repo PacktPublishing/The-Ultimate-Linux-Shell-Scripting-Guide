@@ -1,0 +1,4 @@
+4,6c\
+Let's replace lines\
+four through six\
+to something else.

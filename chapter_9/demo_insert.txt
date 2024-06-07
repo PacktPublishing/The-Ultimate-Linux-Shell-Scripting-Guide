@@ -1,0 +1,2 @@
+/This/i\
+I'll insert this line before all lines that contain "This".

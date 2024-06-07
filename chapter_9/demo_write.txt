@@ -1,0 +1,1 @@
+s/line/sentence/w new_myfile.txt
