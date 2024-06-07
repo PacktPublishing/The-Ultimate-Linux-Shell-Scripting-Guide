@@ -1,0 +1,4 @@
+2,4s/^./\t&/
+8c\
+This really is the last line.
+1d
