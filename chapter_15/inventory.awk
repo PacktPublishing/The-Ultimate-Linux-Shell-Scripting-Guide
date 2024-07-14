@@ -8,7 +8,7 @@ BEGIN {
 {
 	count=1
 	while (count<NF) {
-		print $count ","
+		print $count "\t"
 		count++
 	}
 	print $NF "\n"
