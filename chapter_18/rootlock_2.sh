@@ -4,7 +4,7 @@ os=$(uname)
 quantity=$(cut -f3 -d: /etc/passwd | grep -w 0 | wc -l)
 
 
-linux() {
+linux_sunos() {
 	if [ $quantity -gt 1 ] ; then
 
                 echo "CRITICAL.  There are $quantity accounts with UID 0." 
@@ -29,5 +29,5 @@ linux() {
 	fi
 }
 
-linux
+linux_sunos
 	
