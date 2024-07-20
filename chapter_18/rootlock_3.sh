@@ -4,7 +4,7 @@ os=$(uname)
 quantity=$(cut -f3 -d: /etc/passwd | grep -w 0 | wc -l)
 
 
-linux-sunos() {
+linux_sunos() {
 	if [ $quantity -gt 1 ] ; then
 
                 echo "CRITICAL.  There are $quantity accounts with UID 0." 
@@ -67,7 +67,7 @@ freebsd() {
         fi
 }
 if [ $os == Linux ] || [ $os == SunOS ] ; then
-        linux-sunos
+        linux_sunos
 elif [ $os == FreeBSD ] ; then
         freebsd
 else
