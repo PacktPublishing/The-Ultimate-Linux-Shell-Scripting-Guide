@@ -1,6 +1,6 @@
-#!/bin/bash -x
+#!/bin/bash -u
 
-number=1
+number=$1
 if [ $number = 1 ]; then
 	echo "Number equals 1"
 else
