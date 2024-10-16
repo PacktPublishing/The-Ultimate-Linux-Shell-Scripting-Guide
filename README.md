@@ -139,8 +139,8 @@ password for the root user, and sudo won’t be installed. So, here’s the proc
 - **For FreeBSD:**
 - ***Add yourself to the `wheel` group during FreeBSD installation, like this:***
 
-1. When you get to the installer section that has you create your own user account, you’ll see:
-   ```Login group is `your_username`. Invite `your_username` into other groups.```
+1. When you get to the installer section that has you create your own user account, you’ll see:<br>
+   ```Login group is `your_username`. Invite `your_username` into other groups.```<br>
    Respond by typing wheel, in order to add yourself to the wheel group.
   
 2. After the installation has completed, log into the root user account, using the password that you created during installation.
