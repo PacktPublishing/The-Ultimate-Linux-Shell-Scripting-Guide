@@ -55,7 +55,7 @@ While centered on Bash, this book offers a peek into the future with Z Shell and
      <img src="https://cliply.co/wp-content/uploads/2020/02/372002150_DOCUMENTS_400px.gif" alt="Unity Cookbook, Fifth Edition" height="556px" align="right">
 <ol>
 
-  <li>Shell Basics</li>
+  <li>Getting Started with the Shell</li>
 
   <li>Interpreting Commands</li>
 
@@ -71,31 +71,33 @@ While centered on Bash, this book offers a peek into the future with Z Shell and
 
   <li>Basic Shell Script Construction</li>
 
-  <li>Filtering Text with grep, sed,  and Regular Expressions</li>
+  <li>Filtering Text with grep, sed, and Regular Expressions</li>
 
   <li>Understanding Functions</li>
 
   <li>Performing Mathematical Operations</li>
 
-  <li>Creating here Documents</li>
+  <li>Automating Scripts with here Documents and expect</li>
 
   <li>Scripting with ImageMagick</li>
-
-  <li>Shell Scripting for Security Professionals</li>
-
+ 
   <li>Using awk–Part 1</li>
 
   <li>Using awk–Part 2</li>
 
-  <li>Creating User Interfaces with yad and dialog</li>
+  <li>Creating User Interfaces with yad, dialog, and xdialog</li>
 
-  <li>Using Shell Script Options with getops and shift</li>
+  <li>Using Shell Script Options with getops</li>
 
-  <li>Shell Script Security</li>
+  <li>Shell Scripting for Security Professionals</li>
 
   <li>Shell Script Portability</li>
 
+  <li>Shell Script Security</li>
+
   <li>Debugging Shell Scripts</li>
+
+  <li>Introduction to Z Shell Scripting</li>
 
   <li>Using PowerShell on Linux</li>
 
