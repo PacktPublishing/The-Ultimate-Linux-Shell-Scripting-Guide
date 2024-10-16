@@ -128,7 +128,7 @@ Here’s where you can download the installation images:
 In all cases, you’ll need to create a normal user account that has full sudo privileges. That happens
 automatically with Ubuntu and OpenIndiana during installation. With Debian and Fedora, that will
 happen automatically if you omit creating a root user password during installation.
-For FreeBSD, things are a bit diff erent. That’s because the FreeBSD installer will have you create a
+For FreeBSD, things are a bit different. That’s because the FreeBSD installer will have you create a
 password for the root user, and sudo won’t be installed. So, here’s the procedure for installing FreeBSD.
 
 - **Ubuntu & OpenIndiana:** Automatically grants sudo privileges during installation.
