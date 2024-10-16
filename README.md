@@ -139,30 +139,31 @@ password for the root user, and sudo won’t be installed. So, here’s the proc
 - **For FreeBSD:**
 - ***Add yourself to the `wheel` group during FreeBSD installation, like this:***
 
-1. When you get to the installer section that has you create your own user account, you’ll see:<br>
-   ```Login group is `your_username`. Invite `your_username` into other groups.```<br>
-   Respond by typing wheel, in order to add yourself to the wheel group.
+1. When you get to the installer section that has you create your own user account, you’ll see:<br><br>
+   ```Login group is `your_username`. Invite `your_username` into other groups.```<br><br>
+   Respond by typing `wheel`, in order to add yourself to the wheel group.
   
 2. After the installation has completed, log into the root user account, using the password that you created during installation.
-3. Install the sudo package by doing:
+   ***Install sudo on FreeBSD, like this:***
+1. Install the sudo package by doing:
      ```
      pkg install sudo
      ```
-4. Confi gure `sudo` so that members of the wheel group have full sudo privileges. Begin by entering the command:
+2. Configure `sudo` so that members of the wheel group have full sudo privileges. Begin by entering the command:
      ```
      visudo
      ```
-5. Scroll down to where you see this line:
+3. Scroll down to where you see this line:
      ```
      # %wheel ALL=(ALL:ALL) ALL
      ```
      - Remove the `#` and any leading spaces from this line.
      - Save and exit.
 
-6. Log out from the root user's account, and log back in with your own account.
+4. Log out from the root user's account, and log back in with your own account.
    When you need to perform an administrative command, you can now use sudo, as you would on any Linux distro.
 
-Next, you’ll need to install `bash` on FreeBSD.
+***Next, you’ll need to install `bash` on FreeBSD.***
 Since `bash` doesn’t come installed on FreeBSD by default, you’ll need to install it yourself. Here’s the
 procedure.
 
