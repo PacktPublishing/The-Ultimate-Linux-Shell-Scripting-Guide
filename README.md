@@ -136,11 +136,12 @@ password for the root user, and sudo won’t be installed. So, here’s the proc
 - **Ubuntu & OpenIndiana:** Automatically grants sudo privileges during installation.
 - **Debian & Fedora:** Omit creating a root user password during installation to grant the user full sudo privileges.
 
-- **For FreeBSD, install sudo and bash, like this:**
+- **For FreeBSD:
+- :**Add yourself to the `wheel` group during FreeBSD installation, like this:
 
 1. When you get to the installer section that has you create your own user account, you’ll see:
-   1. Login group is `your_username`. Invite `your_username` into other groups.
-   2. Respond by typing wheel, in order to add yourself to the wheel group.
+   ```Login group is `your_username`. Invite `your_username` into other groups.```
+   Respond by typing wheel, in order to add yourself to the wheel group.
   
 2. After the installation has completed, log into the root user account, using the password that you created during installation.
 3. Install the sudo package by doing:
