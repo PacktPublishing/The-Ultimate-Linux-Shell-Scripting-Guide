@@ -10,9 +10,6 @@ if [ -z $coin ]; then
 	echo "./coingecko.sh currencies"
 	echo "./coingecko.sh coin_name(s) currency"
 	
-elif [ ! -z $coin ] & [ -z $currency ]; then
-	echo "You must also supply a currency."
-
 elif [ $coin == list ]; then
 	curl -X 'GET' \
   "https://api.coingecko.com/api/v3/coins/list?include_platform=true" \
@@ -22,6 +19,9 @@ elif [ $coin == currencies ]; then
        curl -X 'GET' \
   'https://api.coingecko.com/api/v3/simple/supported_vs_currencies' \
   -H 'accept: application/json' | jq | tee currency_list.txt
+
+elif [ ! -z $coin ] & [ -z $currency ]; then
+	echo "You must also supply a currency."
 
 else
 	curl -X 'GET' \
